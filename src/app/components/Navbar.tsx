@@ -43,7 +43,7 @@ const Navbar = () => {
       <div className="flex flex-col">
         {data.map((item) => (
           <Link
-            className="flex items-center gap-4 py-2 px-4 mb-2 text-base md:text-lg text-indigo-600 hover:text-indigo-800 hover:bg-indigo-100 rounded-md transition duration-300"
+            className="flex items-center gap-4 py-2 px-4 mb-2 text-base md:text-lg text-gray-700 hover:text-white hover:bg-indigo-600 rounded-md transition duration-300"
             href={item.link}
             key={item.id}
           >
