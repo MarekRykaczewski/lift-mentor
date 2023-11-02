@@ -4,6 +4,7 @@ import SettingsIcon from "../icons/SettingsIcon";
 import DashboardIcon from "../icons/DashboardIcon";
 import ReportsIcon from "../icons/ReportsIcon";
 import GoalsIcon from "../icons/GoalsIcon";
+import LogoIcon from "../icons/LogoIcon";
 
 const data = [
   {
@@ -34,10 +35,11 @@ const data = [
 
 const Navbar = () => {
   return (
-    <div className="flex flex-col p-4 md:p-10 bg-white text-gray-800">
+    <div className="flex w-[500px] flex-col p-4 md:p-10 bg-white text-gray-800">
       {/* LOGO CONTAINER */}
-      <div className="uppercase text-center text-2xl md:text-3xl text-indigo-500 font-bold mb-4 md:mb-8">
-        Logo
+      <div className="flex items-center justify-center gap-2 uppercase text-center text-2xl md:text-3xl text-indigo-500 font-bold mb-4 md:mb-8">
+        <LogoIcon />
+        <span>Lift Mentor</span>
       </div>
       {/* LINKS CONTAINER */}
       <div className="flex flex-col">
