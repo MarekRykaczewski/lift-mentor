@@ -35,7 +35,7 @@ const data = [
 
 const Navbar = () => {
   return (
-    <div className="flex w-[500px] flex-col p-4 md:p-10 bg-white text-gray-800">
+    <div className="flex w-[500px] flex-col p-4 md:p-10 bg-white">
       {/* LOGO CONTAINER */}
       <div className="flex items-center justify-center gap-2 uppercase text-center text-2xl md:text-3xl text-indigo-500 font-bold mb-4 md:mb-8">
         <LogoIcon />
@@ -45,7 +45,7 @@ const Navbar = () => {
       <div className="flex flex-col">
         {data.map((item) => (
           <Link
-            className="flex items-center gap-4 py-2 px-4 mb-2 text-base md:text-lg text-gray-700 hover:text-white hover:bg-indigo-600 rounded-md transition duration-300"
+            className="flex items-center gap-4 py-2 px-4 mb-2 text-base md:text-lg text-gray-700 hover:text-white hover:bg-indigo-500 rounded-md transition duration-300"
             href={item.link}
             key={item.id}
           >
