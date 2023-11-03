@@ -1,5 +1,34 @@
 export default function Home() {
+  const currentDate = new Date().toDateString();
+
   return (
-    <main className="flex w-full bg-gray-100 min-h-screen flex-col justify-between"></main>
+    <main className="grid grid-cols-3 auto-rows-min gap-4 p-10 w-full text-gray-700 bg-gray-100 min-h-screen">
+      <div className="col-span-full justify-start row-span-1 flex gap-2">
+        <div className="text-xl px-2 rounded-lg font-bold">
+          Welcome back John 👋
+        </div>
+        <div className="flex items-center px-2 bg-indigo-100 rounded-lg font-bold">
+          {currentDate}
+        </div>
+      </div>
+      <div className="flex items-center justify-center p-2 bg-white drop-shadow">
+        Placeholder
+      </div>
+      <div className="flex items-center justify-center p-2 bg-white drop-shadow">
+        Placeholder
+      </div>
+      <div className="flex items-center justify-center p-2 bg-white drop-shadow">
+        Placeholder
+      </div>
+      <div className="flex items-center justify-center p-2 bg-white drop-shadow">
+        Placeholder
+      </div>
+      <div className="flex items-center justify-center p-2 bg-white drop-shadow">
+        Placeholder
+      </div>
+      <div className="flex items-center justify-center p-2 bg-white drop-shadow">
+        Placeholder
+      </div>
+    </main>
   );
 }
