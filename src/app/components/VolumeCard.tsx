@@ -29,7 +29,7 @@ const VolumeCard = () => {
       : 0;
 
   return (
-    <div className="flex flex-col gap-2 items-center bg-white p-2 rounded-lg drop-shadow">
+    <div className="flex flex-col w-full gap-2 items-center bg-white p-2 rounded-lg drop-shadow">
       <p>Volume</p>
       <p className="text-xl font-bold">{weeklyVolumeKgs} kgs</p>
       <p className="text-xs">
