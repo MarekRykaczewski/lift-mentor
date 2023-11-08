@@ -1,4 +1,5 @@
 import VolumeCard from "./components/VolumeCard";
+import WeightCard from "./components/WeightCard";
 
 export default function Home() {
   const currentDate = new Date().toDateString();
@@ -13,11 +14,11 @@ export default function Home() {
           {currentDate}
         </div>
       </div>
-      <div className="flex items-center justify-center w-full h-full">
+      <div className="flex w-full h-full">
         <VolumeCard />
       </div>
-      <div className="flex items-center justify-center p-2 bg-white drop-shadow">
-        Placeholder
+      <div className="flex w-full h-full">
+        <WeightCard />
       </div>
       <div className="flex items-center justify-center p-2 bg-white drop-shadow">
         Placeholder
