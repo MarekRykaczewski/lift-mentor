@@ -1,5 +1,7 @@
 import VolumeCard from "./components/VolumeCard";
+import VolumeGraph from "./components/VolumeGraph";
 import WeightCard from "./components/WeightCard";
+import { mockTrainingData } from "./mockData";
 
 export default function Home() {
   const currentDate = new Date().toDateString();
@@ -23,8 +25,8 @@ export default function Home() {
       <div className="flex items-center justify-center p-2 bg-white drop-shadow">
         Placeholder
       </div>
-      <div className="flex items-center justify-center p-2 bg-white drop-shadow">
-        Placeholder
+      <div className="flex w-full h-full col-span-full">
+        <VolumeGraph trainingData={mockTrainingData} />
       </div>
       <div className="flex items-center justify-center p-2 bg-white drop-shadow">
         Placeholder
