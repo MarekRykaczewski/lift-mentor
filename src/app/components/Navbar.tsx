@@ -1,11 +1,10 @@
 import Link from "next/link";
-import React from "react";
-import SettingsIcon from "../icons/SettingsIcon";
 import DashboardIcon from "../icons/DashboardIcon";
-import ReportsIcon from "../icons/ReportsIcon";
 import GoalsIcon from "../icons/GoalsIcon";
-import LogoIcon from "../icons/LogoIcon";
-import Image from "next/image";
+import ReportsIcon from "../icons/ReportsIcon";
+import SettingsIcon from "../icons/SettingsIcon";
+import WorkoutsIcon from "../icons/WorkoutsIcon";
+import ProfileCard from "./ProfileCard";
 
 const data = [
   {
@@ -28,6 +27,12 @@ const data = [
   },
   {
     id: 4,
+    title: "Workouts",
+    link: "/workouts",
+    icon: <WorkoutsIcon />,
+  },
+  {
+    id: 5,
     title: "Settings",
     link: "/settings",
     icon: <SettingsIcon />,
@@ -36,49 +41,20 @@ const data = [
 
 const Navbar = () => {
   return (
-    <div className="flex w-[500px] flex-col gap-4 p-4 md:p-10 bg-white">
+    <div className="flex w-[500px] flex-col gap-4 p-4 md:p-10 bg-mainDark">
       {/* LOGO CONTAINER */}
-      <div className="flex items-center justify-center gap-2 uppercase text-center text-2xl md:text-3xl text-indigo-500 font-bold">
-        <LogoIcon />
-        <span>Lift Mentor</span>
+      <div className="flex items-center justify-center gap-2 text-center text-2xl md:text-3xl text-white font-bold">
+        <span>lift mentor</span>
       </div>
-      {/* PROFILE CARD CONTAINER */}
-      <div className="bg-indigo-50 p-4 rounded-lg text-gray-700">
-        <div className="flex justify-around items-center mb-4 text-center">
-          <Image
-            className="rounded-full"
-            src={"/avatar_placeholder.png"}
-            alt="Your profile picture"
-            width={60}
-            height={60}
-          />
-          <div className="flex flex-col">
-            <span className="text-xl text-center font-bold">John Doe</span>
-            <span className="text-sm text-indigo-600 text-center">
-              Building muscle
-            </span>
-          </div>
-        </div>
-        <div className="w-full flex justify-around text-center">
-          <div className="flex flex-col">
-            <span className="text-sm text-indigo-600">Age</span>
-            <span className="font-bold">25</span>
-          </div>
-          <div className="flex flex-col">
-            <span className="text-sm text-indigo-600">Height</span>
-            <span className="font-bold">180cm</span>
-          </div>
-          <div className="flex flex-col">
-            <span className="text-sm text-indigo-600">Weight</span>
-            <span className="font-bold">75kg</span>
-          </div>
-        </div>
-      </div>
+      <ProfileCard />
+      <div className="border-t border-2 border-gray-600 my-2"></div>
       {/* LINKS CONTAINER */}
-      <div className="flex flex-col">
+      <div className="flex flex-col h-full">
         {data.map((item) => (
           <Link
-            className="flex items-center gap-4 py-2 px-4 mb-2 text-base md:text-lg text-gray-700 hover:text-white hover:bg-indigo-500 rounded-md transition duration-300"
+            className={`flex items-center gap-4 py-2 px-4 mb-2 text-base md:text-lg text-white hover:bg-indigo-500 rounded-md transition duration-300 ${
+              item.title === "Settings" && "mt-auto"
+            }`}
             href={item.link}
             key={item.id}
           >
