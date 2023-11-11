@@ -14,7 +14,7 @@ export default function Home() {
             {currentDate}
           </div>
         </div>
-        <div className="flex w-full h-full col-span-full ">
+        <div className="flex w-full h-full col-span-2 ">
           <WeeklyStatsCard />
         </div>
         <div className="flex items-center justify-center p-2 border-2 rounded-lg border-gray-600 text-white font-bold drop-shadow">

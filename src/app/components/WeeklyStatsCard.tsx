@@ -5,7 +5,7 @@ import VolumeCard from "./WeeklyVolume";
 
 const WeeklyStatsCard = () => {
   return (
-    <div className="flex flex-col gap-2 border-2 border-gray-600 bg-mainDark text-white p-8 rounded-lg">
+    <div className="flex flex-col w-full gap-2 border-2 border-gray-600 bg-mainDark text-white p-8 rounded-lg">
       <div className="uppercase font-bold text-xl mb-2">Weekly Stats</div>
       <div className="flex mb-2">
         <WeightCard />
