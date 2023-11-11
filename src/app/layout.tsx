@@ -17,9 +17,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className} style={{ display: "flex" }}>
-        <Navbar />
-        {children}
+      <body className={inter.className}>
+        <div className="flex min-h-screen">
+          <Navbar />
+          {children}
+        </div>
       </body>
     </html>
   );
