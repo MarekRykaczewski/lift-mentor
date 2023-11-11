@@ -30,7 +30,7 @@ const WeeklyVolume = () => {
 
   return (
     <div className="flex flex-col w-full gap-2 items-start">
-      <p className="text-sm text-gray-400">Volume</p>
+      <p className="text-sm text-gray-400">Total Training Volume</p>
       <p className="text-xl font-bold">
         {weeklyVolumeKgs}
         <span className="text-gray-400 text-sm font-normal"> kgs</span>
