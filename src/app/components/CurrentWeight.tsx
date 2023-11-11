@@ -1,6 +1,6 @@
 import { mockBodyWeightData } from "../mockData";
 
-const WeightCard = () => {
+const CurrentWeight = () => {
   // Find the most recent body weight
   const mostRecentBodyWeightData = mockBodyWeightData.reduce(
     (mostRecent, data) => {
@@ -45,4 +45,4 @@ const WeightCard = () => {
   );
 };
 
-export default WeightCard;
+export default CurrentWeight;

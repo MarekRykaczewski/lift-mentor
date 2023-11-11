@@ -1,7 +1,7 @@
 import { mockTrainingData } from "../mockData";
-import VolumeCard from "./VolumeCard";
+import WeightCard from "./CurrentWeight";
 import VolumeGraph from "./VolumeGraph";
-import WeightCard from "./WeightCard";
+import VolumeCard from "./WeeklyVolume";
 
 const WeeklyStatsCard = () => {
   return (

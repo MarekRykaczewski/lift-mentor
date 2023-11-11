@@ -1,6 +1,6 @@
 import { mockTrainingData } from "../mockData";
 
-const VolumeCard = () => {
+const WeeklyVolume = () => {
   const currentDate = new Date();
   const oneWeekAgo = new Date(currentDate);
   oneWeekAgo.setDate(oneWeekAgo.getDate() - 7);
@@ -51,4 +51,4 @@ const VolumeCard = () => {
   );
 };
 
-export default VolumeCard;
+export default WeeklyVolume;
