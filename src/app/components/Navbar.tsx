@@ -52,7 +52,7 @@ const Navbar = () => {
       <div className="flex flex-col h-full">
         {data.map((item) => (
           <Link
-            className={`flex items-center gap-4 py-2 px-4 mb-2 text-base md:text-lg text-white hover:bg-indigo-500 rounded-md transition duration-300 ${
+            className={`flex items-center gap-4 py-2 px-4 mb-2 font-bold text-base md:text-lg text-white hover:text-indigo-400 rounded-md transition duration-300 ${
               item.title === "Settings" && "mt-auto"
             }`}
             href={item.link}
