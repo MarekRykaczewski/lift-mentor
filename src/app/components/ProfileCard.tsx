@@ -13,22 +13,22 @@ const ProfileCard = () => {
         />
         <div className="flex flex-col">
           <span className="text-2xl text-center font-bold">Hi, John!</span>
-          <span className="text-md text-gray-400 text-center">
+          <span className="text-md text-indigo-400 text-center">
             Building muscle
           </span>
         </div>
       </div>
       <div className="w-full flex flex-col justify-around text-center">
         <div className="flex flex-row items-center justify-between">
-          <span className="text-sm text-gray-400">Age</span>
+          <span className="text-sm text-indigo-400">Age</span>
           <span className="font-bold">25</span>
         </div>
         <div className="flex flex-row items-center justify-between">
-          <span className="text-sm text-gray-400">Height</span>
+          <span className="text-sm text-indigo-400">Height</span>
           <span className="font-bold">180cm</span>
         </div>
         <div className="flex flex-row items-center justify-between">
-          <span className="text-sm text-gray-400">Weight</span>
+          <span className="text-sm text-indigo-400">Weight</span>
           <span className="font-bold">75kg</span>
         </div>
       </div>
