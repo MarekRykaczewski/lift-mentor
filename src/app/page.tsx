@@ -4,7 +4,7 @@ export default function Home() {
   const currentDate = new Date().toDateString();
 
   return (
-    <main className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 auto-rows-min gap-4 p-4 sm:p-6 md:p-10 w-full bg-mainDark min-h-screen">
+    <main className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 auto-rows-min gap-4 p-4 sm:p-6 md:p-10 w-full bg-mainDark">
       <div className="col-span-full justify-start row-span-1 flex gap-2">
         <div className="text-xl px-2 text-white rounded-lg font-bold">
           Welcome back John 👋
