@@ -12,10 +12,7 @@ const ProfileCard = () => {
           height={80}
         />
         <div className="flex flex-col">
-          <span className="text-2xl text-center font-bold">Hi, John!</span>
-          <span className="text-md text-indigo-400 text-center">
-            Building muscle
-          </span>
+          <span className="text-2xl text-center font-bold">John Doe</span>
         </div>
       </div>
       <div className="w-full flex flex-col justify-around text-center">

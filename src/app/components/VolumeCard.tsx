@@ -29,10 +29,13 @@ const VolumeCard = () => {
       : 0;
 
   return (
-    <div className="flex flex-col w-full gap-2 items-center bg-white p-2 rounded-lg drop-shadow">
-      <p>Volume</p>
-      <p className="text-xl font-bold">{weeklyVolumeKgs} kgs</p>
-      <p className="text-xs">
+    <div className="flex flex-col w-full gap-2 items-start">
+      <p className="text-sm text-gray-400">Volume</p>
+      <p className="text-xl font-bold">
+        {weeklyVolumeKgs}
+        <span className="text-gray-400 text-sm font-normal"> kgs</span>
+      </p>
+      <p className="text-xs text-gray-400">
         {previousWeekVolumeKgs !== 0 && (
           <span className="text-green-500 font-bold">
             {percentageChange > 0

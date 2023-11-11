@@ -4,6 +4,8 @@ import { Chart, registerables } from "chart.js";
 import { Bar } from "react-chartjs-2";
 Chart.register(...registerables);
 
+Chart.defaults.color = "#9ca3af";
+
 const VolumeGraph = ({ trainingData }) => {
   // Group the training data by date and muscle
   const groupedData = trainingData.reduce((acc, entry) => {
@@ -19,12 +21,15 @@ const VolumeGraph = ({ trainingData }) => {
     return acc;
   }, {});
 
+  const customColors = ["#FF5733", "#33FF57", "#3357FF", "#FF33E6", "#E6FF33"];
+
   // Organize the grouped data into separate datasets for each muscle
-  const datasets = Object.values(groupedData).reduce((acc, entry) => {
+  const datasets = Object.values(groupedData).reduce((acc, entry, index) => {
     if (!acc[entry.muscle]) {
       acc[entry.muscle] = {
         label: entry.muscle,
         data: [],
+        backgroundColor: customColors[index % customColors.length],
       };
     }
     acc[entry.muscle].data.push(entry.volume);
@@ -42,20 +47,21 @@ const VolumeGraph = ({ trainingData }) => {
     scales: {
       x: {
         stacked: true,
+        grid: {
+          display: false, // hide vertical gridlines
+        },
       },
       y: {
         stacked: true,
         beginAtZero: true,
+        grid: {
+          color: "rgba(255, 255, 255, 0.1)",
+        },
       },
     },
   };
 
-  return (
-    <div className="w-full bg-white p-4 rounded-lg drop-shadow">
-      <h2>Training Volume Graph</h2>
-      <Bar data={chartData} options={options} />
-    </div>
-  );
+  return <Bar data={chartData} options={options} />;
 };
 
 export default VolumeGraph;

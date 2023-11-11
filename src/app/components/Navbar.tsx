@@ -41,7 +41,7 @@ const data = [
 
 const Navbar = () => {
   return (
-    <div className="flex w-[500px] flex-col gap-4 p-4 md:p-10 bg-mainDark">
+    <div className="flex w-[500px] flex-col gap-4 p-4 md:p-10 border-r-2 border-gray-600 bg-mainDark">
       {/* LOGO CONTAINER */}
       <div className="flex items-center justify-center gap-2 text-center text-2xl md:text-3xl text-white font-bold">
         <span>lift mentor</span>

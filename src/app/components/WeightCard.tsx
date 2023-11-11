@@ -21,10 +21,13 @@ const WeightCard = () => {
     : 0;
 
   return (
-    <div className="flex flex-col w-full gap-2 items-center bg-white p-2 rounded-lg drop-shadow">
-      <p>Body Weight</p>
-      <p className="text-xl font-bold">{mostRecentBodyWeightData.weight} kgs</p>
-      <p className="text-xs">
+    <div className="flex flex-col w-full gap-2 items-start">
+      <p className="text-sm text-gray-400">Body Weight</p>
+      <p className="text-xl font-bold">
+        {mostRecentBodyWeightData.weight}{" "}
+        <span className="text-gray-400 font-normal text-sm">kgs</span>
+      </p>
+      <p className="text-xs text-gray-400">
         {previousBodyWeightData && (
           <span className="text-green-500 font-bold">
             {rawIncrease > 0
