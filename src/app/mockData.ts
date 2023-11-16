@@ -1,4 +1,5 @@
 interface TrainingData {
+  exercise: string;
   muscle: string;
   weight: number;
   sets: number;
@@ -8,6 +9,7 @@ interface TrainingData {
 
 export const mockTrainingData: TrainingData[] = [
   {
+    exercise: "Bench Press",
     muscle: "Chest",
     weight: 100,
     sets: 3,
@@ -15,6 +17,7 @@ export const mockTrainingData: TrainingData[] = [
     date: new Date("2023-11-01"),
   },
   {
+    exercise: "Deadlift",
     muscle: "Back",
     weight: 80,
     sets: 3,
@@ -22,6 +25,7 @@ export const mockTrainingData: TrainingData[] = [
     date: new Date("2023-10-01"),
   },
   {
+    exercise: "Squat",
     muscle: "Legs",
     weight: 120,
     sets: 3,
@@ -29,6 +33,7 @@ export const mockTrainingData: TrainingData[] = [
     date: new Date("2023-09-02"),
   },
   {
+    exercise: "Bench Press",
     muscle: "Chest",
     weight: 110,
     sets: 4,
@@ -36,6 +41,7 @@ export const mockTrainingData: TrainingData[] = [
     date: new Date("2023-08-02"),
   },
   {
+    exercise: "Deadlift",
     muscle: "Back",
     weight: 90,
     sets: 3,
@@ -43,6 +49,7 @@ export const mockTrainingData: TrainingData[] = [
     date: new Date("2023-12-27"),
   },
   {
+    exercise: "Squat",
     muscle: "Legs",
     weight: 130,
     sets: 4,
