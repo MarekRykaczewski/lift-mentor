@@ -1,6 +1,5 @@
 import Link from "next/link";
 import DashboardIcon from "../icons/DashboardIcon";
-import GoalsIcon from "../icons/GoalsIcon";
 import ReportsIcon from "../icons/ReportsIcon";
 import SettingsIcon from "../icons/SettingsIcon";
 import WorkoutsIcon from "../icons/WorkoutsIcon";
@@ -21,18 +20,12 @@ const data = [
   },
   {
     id: 3,
-    title: "Goals",
-    link: "/goals",
-    icon: <GoalsIcon />,
-  },
-  {
-    id: 4,
     title: "Workouts",
     link: "/workouts",
     icon: <WorkoutsIcon />,
   },
   {
-    id: 5,
+    id: 4,
     title: "Settings",
     link: "/settings",
     icon: <SettingsIcon />,
