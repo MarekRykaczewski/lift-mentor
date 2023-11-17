@@ -7,6 +7,7 @@ import ChevronRight from "../icons/ChevronRight";
 import { mockTrainingData } from "../mockData";
 import { generateDates, months } from "../utils/calendar";
 import cn from "../utils/cn";
+import Modal from "./Modal";
 
 interface DayCellProps {
   date: Dayjs;
@@ -21,9 +22,17 @@ const DayCell: React.FC<DayCellProps> = ({
   today,
   onClick,
 }) => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   const trainingData = mockTrainingData.filter((training) =>
     dayjs(training.date).isSame(date, "day")
   );
+
+  const handleCellClick = () => {
+    if (trainingData.length > 0) {
+      setIsModalOpen(true);
+    }
+  };
 
   const cellClasses = cn(
     currentMonth ? "" : "text-gray-400",
@@ -32,16 +41,55 @@ const DayCell: React.FC<DayCellProps> = ({
   );
 
   return (
-    <div className="relative h-14 border-t grid place-content-center text-sm">
-      <h1 className={cellClasses} onClick={onClick}>
-        {date.date()}
-        {trainingData.length > 0 && (
-          <span className="absolute bottom-1 left-1/2 transform -translate-x-1/2 block text-xs text-green-500">
-            &#8226;
-          </span>
-        )}
-      </h1>
-    </div>
+    <>
+      <div
+        onClick={handleCellClick}
+        className="relative h-14 border-t grid place-content-center text-sm"
+      >
+        <h1 className={cellClasses} onClick={onClick}>
+          {date.date()}
+          {trainingData.length > 0 && (
+            <span className="absolute bottom-1 left-1/2 transform -translate-x-1/2 block text-xs text-green-500">
+              &#8226;
+            </span>
+          )}
+        </h1>
+      </div>
+      <Modal open={isModalOpen} onClose={() => setIsModalOpen(false)}>
+        <div className="text-white bg-mainDark p-8 w-[calc(100vw-10rem)] h-[calc(100vh-10rem)]">
+          <h1 className="font-semibold text-xl py-2 mb-2 text-center border-b-2 border-indigo-600">
+            {date.toDate().toDateString()}
+          </h1>
+          {trainingData.length > 0 ? (
+            trainingData.map((training, index) => (
+              <div key={index} className="mb-4">
+                <h2 className="text-lg font-semibold border-b-2 border-indigo-600 w-fit">
+                  {training.exercise}
+                </h2>
+                {Array.from({ length: training.sets }, (_, setIndex) => (
+                  <div
+                    key={setIndex}
+                    className="flex justify-between hover:bg-gray-600 hover:bg-opacity-60 cursor-pointer"
+                  >
+                    <div className="w-1/3"> {/** Empty column */}</div>
+                    <div className="w-1/3">
+                      {training.weight}{" "}
+                      <span className="text-sm text-gray-400">lbs</span>
+                    </div>
+                    <div className="w-1/3">
+                      {training.reps}{" "}
+                      <span className="text-sm text-gray-400">reps</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            ))
+          ) : (
+            <p>No workouts for today</p>
+          )}
+        </div>
+      </Modal>
+    </>
   );
 };
 
