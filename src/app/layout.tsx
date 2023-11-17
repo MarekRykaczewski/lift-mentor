@@ -21,6 +21,7 @@ export default function RootLayout({
         <div className="flex min-h-screen bg-mainDark">
           <Navbar />
           {children}
+          <div id="portal" />
         </div>
       </body>
     </html>
