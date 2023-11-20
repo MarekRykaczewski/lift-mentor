@@ -1,6 +1,6 @@
 import Link from "next/link";
+import AnalysisIcon from "../icons/AnalysisIcon";
 import DashboardIcon from "../icons/DashboardIcon";
-import ReportsIcon from "../icons/ReportsIcon";
 import SettingsIcon from "../icons/SettingsIcon";
 import WorkoutsIcon from "../icons/WorkoutsIcon";
 import ProfileCard from "./ProfileCard";
@@ -14,9 +14,9 @@ const data = [
   },
   {
     id: 2,
-    title: "Reports",
-    link: "/reports",
-    icon: <ReportsIcon />,
+    title: "Analysis",
+    link: "/analysis",
+    icon: <AnalysisIcon />,
   },
   {
     id: 3,

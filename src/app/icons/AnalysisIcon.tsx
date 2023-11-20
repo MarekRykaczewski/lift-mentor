@@ -1,6 +1,4 @@
-import React from "react";
-
-const ReportsIcon = () => {
+const AnalysisIcon = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -19,4 +17,4 @@ const ReportsIcon = () => {
   );
 };
 
-export default ReportsIcon;
+export default AnalysisIcon;
